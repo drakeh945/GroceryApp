@@ -24,6 +24,7 @@ struct Section: Hashable {
      // pair with static 
     enum itemSectionType:String {
         case header
+        case SearchBar
         
     }
     struct SectionType: RawRepresentable, Hashable {
@@ -34,5 +35,7 @@ struct Section: Hashable {
         }
       // can copy this line for
         static let header = SectionType (rawValue: Section.itemSectionType.header.rawValue)
+        static let SearchBar = SectionType (rawValue: Section.itemSectionType.SearchBar.rawValue)
+    
     }
 }

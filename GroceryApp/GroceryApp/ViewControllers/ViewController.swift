@@ -33,9 +33,28 @@ class ViewController: UIViewController {
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+                
                 let section = NSCollectionLayoutSection(group:group)
                 section.orthogonalScrollingBehavior = .groupPaging
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 0)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
+                
+                return section
+                
+                
+            case .SearchBar:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(318), heightDimension: .absolute(54))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+                
+                let section = NSCollectionLayoutSection(group:group)
+                section.orthogonalScrollingBehavior = .groupPaging
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 5, trailing: 0)
+                
                 return section
                 
             default: return nil
@@ -63,6 +82,8 @@ class ViewController: UIViewController {
     private func setupCollectionView(){
         collectionView.register(UINib(nibName: "HeaderCell", bundle: .main), forCellWithReuseIdentifier: "HeaderCell")
         
+        collectionView.register(UINib(nibName: "SearchBarCell", bundle: .main), forCellWithReuseIdentifier: "SearchBarCell")
+        
         collectionView.collectionViewLayout=collectionViewLayout
         
     }
@@ -80,6 +101,10 @@ class ViewController: UIViewController {
             case .header:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderCell", for: indexPath)
                 return cell
+            case .SearchBar:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchBarCell", for: indexPath)
+                return cell
+                
             default:return nil
             }
         }
@@ -87,7 +112,11 @@ class ViewController: UIViewController {
         let sections = [
             Section(type: .header, items: [
             Item()
+            ]),
+            Section(type: .SearchBar, items: [
+            Item()
             ])
+            
         ]
         
         var snapshot = NSDiffableDataSourceSnapshot<Section,Item>()

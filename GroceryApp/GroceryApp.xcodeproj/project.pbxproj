@@ -15,6 +15,10 @@
 		C43C8401293809F9007697A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43C83FF293809F9007697A6 /* LaunchScreen.storyboard */; };
 		C43C840A29394673007697A6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C840929394673007697A6 /* Item.swift */; };
 		C43C840C29394868007697A6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C840B29394868007697A6 /* Section.swift */; };
+		C43C8413293961C7007697A6 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C8411293961C7007697A6 /* HeaderCell.swift */; };
+		C43C8414293961C7007697A6 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C8412293961C7007697A6 /* HeaderCell.xib */; };
+		C43C841729396AFD007697A6 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C841529396AFD007697A6 /* SearchBarCell.swift */; };
+		C43C841829396AFD007697A6 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C841629396AFD007697A6 /* SearchBarCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C43C8402293809F9007697A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43C840929394673007697A6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C43C840B29394868007697A6 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		C43C8411293961C7007697A6 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		C43C8412293961C7007697A6 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		C43C841529396AFD007697A6 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
+		C43C841629396AFD007697A6 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +71,8 @@
 				C43C840F29395F9A007697A6 /* App */,
 				C43C840E29395F67007697A6 /* Utilities  */,
 				C43C840D29395F47007697A6 /* Views */,
+				C43C8410293960D5007697A6 /* ViewControllers */,
 				C43C840829394655007697A6 /* Models */,
-				C43C83F8293809F8007697A6 /* ViewController.swift */,
 				C43C8402293809F9007697A6 /* Info.plist */,
 			);
 			path = GroceryApp;
@@ -82,6 +90,10 @@
 		C43C840D29395F47007697A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C43C8411293961C7007697A6 /* HeaderCell.swift */,
+				C43C8412293961C7007697A6 /* HeaderCell.xib */,
+				C43C841529396AFD007697A6 /* SearchBarCell.swift */,
+				C43C841629396AFD007697A6 /* SearchBarCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +115,14 @@
 				C43C83F4293809F8007697A6 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		C43C8410293960D5007697A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C43C83F8293809F8007697A6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +182,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43C8414293961C7007697A6 /* HeaderCell.xib in Resources */,
 				C43C8401293809F9007697A6 /* LaunchScreen.storyboard in Resources */,
 				C43C83FE293809F9007697A6 /* Assets.xcassets in Resources */,
+				C43C841829396AFD007697A6 /* SearchBarCell.xib in Resources */,
 				C43C83FC293809F8007697A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,10 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43C841729396AFD007697A6 /* SearchBarCell.swift in Sources */,
 				C43C840C29394868007697A6 /* Section.swift in Sources */,
 				C43C840A29394673007697A6 /* Item.swift in Sources */,
 				C43C83F9293809F8007697A6 /* ViewController.swift in Sources */,
 				C43C83F5293809F8007697A6 /* AppDelegate.swift in Sources */,
+				C43C8413293961C7007697A6 /* HeaderCell.swift in Sources */,
 				C43C83F7293809F8007697A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
