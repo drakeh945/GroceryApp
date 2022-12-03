@@ -25,8 +25,13 @@ struct Section: Hashable {
     enum itemSectionType:String {
         case header
         case SearchBar
-        
+        case promotion
+        case categories
+        case categoriesItems
+        case popularheader
+        case populardeals
     }
+    
     struct SectionType: RawRepresentable, Hashable {
         typealias RawValue = String
         var rawValue: String
@@ -36,6 +41,14 @@ struct Section: Hashable {
       // can copy this line for
         static let header = SectionType (rawValue: Section.itemSectionType.header.rawValue)
         static let SearchBar = SectionType (rawValue: Section.itemSectionType.SearchBar.rawValue)
-    
+        static let promotion = SectionType (rawValue: Section.itemSectionType.promotion.rawValue)
+        static let categories = SectionType (rawValue: Section.itemSectionType.categories.rawValue)
+        static let categoriesItems = SectionType (rawValue: Section.itemSectionType.categoriesItems.rawValue)
+        
+        static let popularheader  = SectionType (rawValue: Section.itemSectionType.popularheader.rawValue)
+        static let populardeals  = SectionType (rawValue: Section.itemSectionType.populardeals.rawValue)
+   
     }
+    
+    
 }

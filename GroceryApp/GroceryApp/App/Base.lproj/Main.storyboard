@@ -26,6 +26,9 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JMM-Ip-ac9"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,11 +42,22 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BoA-sa-WHe" id="voE-5j-n7I"/>
+                        <segue destination="4Pl-EA-IsH" kind="show" id="be1-SO-wry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+        <!--DetailViewController-->
+        <scene sceneID="Jpf-4z-x5i">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailViewController" storyboardName="DetailView" referencedIdentifier="DetailViewController" id="4Pl-EA-IsH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nHL-O0-XY6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zu0-Mj-N7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="-23"/>
         </scene>
     </scenes>
     <resources>
