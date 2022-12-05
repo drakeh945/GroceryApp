@@ -171,11 +171,8 @@ class ViewController: UIViewController {
     
     private func setupCollectionView(){
         collectionView.register(UINib(nibName: "HeaderCell", bundle: .main), forCellWithReuseIdentifier: "HeaderCell")
-        
         collectionView.register(UINib(nibName: "SearchBarCell", bundle: .main), forCellWithReuseIdentifier: "SearchBarCell")
-        
         collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
-       
         collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
         collectionView.register(CategoriesItemsCell.nib, forCellWithReuseIdentifier: CategoriesItemsCell.reuseIdentifier)
         collectionView.register(PopularDealsCell.nib, forCellWithReuseIdentifier: PopularDealsCell.reuseIdentifier)

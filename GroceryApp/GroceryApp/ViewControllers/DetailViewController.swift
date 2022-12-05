@@ -9,6 +9,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var DetailCollectionView: UICollectionView!
+    
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,3 +33,5 @@ class DetailViewController: UIViewController {
     */
 
 }
+    
+

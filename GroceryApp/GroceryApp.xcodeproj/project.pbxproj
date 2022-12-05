@@ -124,6 +124,7 @@
 				C43C8424293BC7BA007697A6 /* CategoriesItemsCell.xib */,
 				C43C8427293BCEE1007697A6 /* PopularDealsCell.swift */,
 				C43C8428293BCEE1007697A6 /* PopularDealsCell.xib */,
+				C43C842F293BF236007697A6 /* DetailViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +157,13 @@
 				C43C842D293BDB97007697A6 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C43C842F293BF236007697A6 /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
