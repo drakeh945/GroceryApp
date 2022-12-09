@@ -44,7 +44,6 @@ struct Section: Hashable {
         static let promotion = SectionType (rawValue: Section.itemSectionType.promotion.rawValue)
         static let categories = SectionType (rawValue: Section.itemSectionType.categories.rawValue)
         static let categoriesItems = SectionType (rawValue: Section.itemSectionType.categoriesItems.rawValue)
-        
         static let popularheader  = SectionType (rawValue: Section.itemSectionType.popularheader.rawValue)
         static let populardeals  = SectionType (rawValue: Section.itemSectionType.populardeals.rawValue)
    

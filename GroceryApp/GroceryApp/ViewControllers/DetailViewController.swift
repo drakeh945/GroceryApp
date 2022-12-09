@@ -17,11 +17,15 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        initialize()
+        
+        
         // Do any additional setup after loading the view.
     }
-    
-
+//    func initialize(){
+//        setupCollectionView()
+//        configureDataSource()
+//    }
     /*
     // MARK: - Navigation
 
