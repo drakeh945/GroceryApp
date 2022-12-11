@@ -15,14 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="5r6-OP-QjK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="exf-OU-Tpj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V26-MI-1Qu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mif-Zi-SE3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="exf-OU-Tpj" secondAttribute="bottom" id="Oh9-6b-08c"/>
+                            <constraint firstItem="exf-OU-Tpj" firstAttribute="leading" secondItem="Mif-Zi-SE3" secondAttribute="leading" id="rit-gg-Esw"/>
+                            <constraint firstItem="exf-OU-Tpj" firstAttribute="trailing" secondItem="Mif-Zi-SE3" secondAttribute="trailing" id="wRO-po-sut"/>
+                            <constraint firstItem="exf-OU-Tpj" firstAttribute="top" secondItem="5r6-OP-QjK" secondAttribute="top" id="zaZ-LN-80s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1yF-Pz-Lve"/>
+                    <connections>
+                        <outlet property="collectionView" destination="exf-OU-Tpj" id="cWn-kQ-YKX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7C-CD-b9n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="100"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>

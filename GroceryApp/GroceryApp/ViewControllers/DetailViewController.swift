@@ -10,32 +10,81 @@ import UIKit
 class DetailViewController: UIViewController {
 
     
-    @IBOutlet weak var DetailCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var dataSource: UICollectionViewDiffableDataSource <Section,Item>!
+    private var snapshot = NSDiffableDataSourceSnapshot <Section,Item>()
+    
+    lazy var collectionViewLayout: UICollectionViewLayout = {
+        
+        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, enviroment) -> NSCollectionLayoutSection? in
+            guard let self = self else {return nil}
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionType = snapshot.sectionIdentifiers[sectionIndex].type
+            
+            switch sectionType {
+            case .fruitCell:
+                return LayoutSectionFactory.fruitCell() 
+            default: return nil
+            }
+        }
+        return layout
+    }()
     
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        initialize()
-        
-        
-        // Do any additional setup after loading the view.
+      initialize()
     }
-//    func initialize(){
-//        setupCollectionView()
-//        configureDataSource()
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initialize(){
+        setupCollectionView()
+        configureDataSource()
     }
-    */
-
-}
     
+    private func setupCollectionView(){
+        let cells: [RegisterableView] = [
+            .nib(FruitsCell.self)
+        ]
+        
+        
+       
+        collectionView.register(cells: cells)
+        collectionView.collectionViewLayout=collectionViewLayout
+        
+    }
+    
+    
+    
+    private func configureDataSource(){
+    dataSource = UICollectionViewDiffableDataSource<Section,Item>(collectionView:collectionView){[weak self]
+            (collectionView,indexPath,item) in
+            guard let self = self else {return UICollectionViewCell()}
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionType = snapshot.sectionIdentifiers[indexPath.section].type
+            
+            switch sectionType{
+            case .fruitCell:
+                let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "FruitsCell", for: indexPath)
+                return cell
 
+                
+            default:return nil
+            }
+        }
+        
+        let sections = [
+            Section(type:.fruitCell,items: [
+                        Item()
+            ])
+        ]
+        
+          
+        var snapshot = NSDiffableDataSourceSnapshot<Section,Item>()
+        snapshot.appendSections(sections)
+        sections.forEach {snapshot.appendItems($0.items, toSection: $0)}
+        dataSource.apply(snapshot,animatingDifferences: false)
+    }
+}

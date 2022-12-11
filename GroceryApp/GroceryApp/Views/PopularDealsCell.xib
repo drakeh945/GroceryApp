@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,8 +18,17 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phV-7o-gah">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="261"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="raw-chicken-drumsticks-2022-03-03-10-53-33-utc 1" translatesAutoresizingMaskIntoConstraints="NO" id="NVj-Zk-y7g">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="OWI-8c-l9D"/>
                             <constraint firstAttribute="height" constant="261" id="oyW-b2-l6z"/>
@@ -40,8 +48,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="raw-chicken-drumsticks-2022-03-03-10-53-33-utc 1" width="150" height="140"/>
     </resources>
 </document>

@@ -33,6 +33,8 @@
 		C43C843529427E58007697A6 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C843229427E58007697A6 /* UIView+IBInspectable.swift */; };
 		C43C843729427E7A007697A6 /* LayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C843629427E7A007697A6 /* LayoutSection.swift */; };
 		C43C843A2942909B007697A6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43C84382942909B007697A6 /* Detail.storyboard */; };
+		C43C843D29451852007697A6 /* FruitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C843B29451852007697A6 /* FruitsCell.swift */; };
+		C43C843E29451852007697A6 /* FruitsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C843C29451852007697A6 /* FruitsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		C43C843229427E58007697A6 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+IBInspectable.swift"; path = "../../../../../../Downloads/Utilities 2/UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C43C843629427E7A007697A6 /* LayoutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSection.swift; sourceTree = "<group>"; };
 		C43C84392942909B007697A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GroceryApp/App/Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
+		C43C843B29451852007697A6 /* FruitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCell.swift; sourceTree = "<group>"; };
+		C43C843C29451852007697A6 /* FruitsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,8 @@
 		C43C842F293BF236007697A6 /* DetailViews */ = {
 			isa = PBXGroup;
 			children = (
+				C43C843B29451852007697A6 /* FruitsCell.swift */,
+				C43C843C29451852007697A6 /* FruitsCell.xib */,
 			);
 			path = DetailViews;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				C43C8414293961C7007697A6 /* HeaderCell.xib in Resources */,
 				C43C843A2942909B007697A6 /* Detail.storyboard in Resources */,
 				C43C8401293809F9007697A6 /* LaunchScreen.storyboard in Resources */,
+				C43C843E29451852007697A6 /* FruitsCell.xib in Resources */,
 				C43C83FE293809F9007697A6 /* Assets.xcassets in Resources */,
 				C43C841C293BBA2E007697A6 /* PromotionCell.xib in Resources */,
 				C43C841829396AFD007697A6 /* SearchBarCell.xib in Resources */,
@@ -268,6 +275,7 @@
 				C43C8413293961C7007697A6 /* HeaderCell.swift in Sources */,
 				C43C843529427E58007697A6 /* UIView+IBInspectable.swift in Sources */,
 				C43C83F7293809F8007697A6 /* SceneDelegate.swift in Sources */,
+				C43C843D29451852007697A6 /* FruitsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,9 @@ struct Section: Hashable {
         case categoriesItems
         case popularheader
         case populardeals
+        case fruitCell
     }
+    
     
     struct SectionType: RawRepresentable, Hashable {
         typealias RawValue = String
@@ -46,7 +48,7 @@ struct Section: Hashable {
         static let categoriesItems = SectionType (rawValue: Section.itemSectionType.categoriesItems.rawValue)
         static let popularheader  = SectionType (rawValue: Section.itemSectionType.popularheader.rawValue)
         static let populardeals  = SectionType (rawValue: Section.itemSectionType.populardeals.rawValue)
-   
+        static let fruitCell  = SectionType (rawValue: Section.itemSectionType.fruitCell.rawValue)
     }
     
     
