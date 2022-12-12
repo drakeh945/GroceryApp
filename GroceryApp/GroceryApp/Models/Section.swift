@@ -31,6 +31,7 @@ struct Section: Hashable {
         case popularheader
         case populardeals
         case fruitCell
+        case descriptionCell
     }
     
     
@@ -49,6 +50,7 @@ struct Section: Hashable {
         static let popularheader  = SectionType (rawValue: Section.itemSectionType.popularheader.rawValue)
         static let populardeals  = SectionType (rawValue: Section.itemSectionType.populardeals.rawValue)
         static let fruitCell  = SectionType (rawValue: Section.itemSectionType.fruitCell.rawValue)
+        static let desriptionCell  = SectionType (rawValue: Section.itemSectionType.descriptionCell.rawValue)
     }
     
     

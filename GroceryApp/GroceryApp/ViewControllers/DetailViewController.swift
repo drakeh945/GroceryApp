@@ -26,7 +26,10 @@ class DetailViewController: UIViewController {
             switch sectionType {
             case .fruitCell:
                 return LayoutSectionFactory.fruitCell() 
+            case .desriptionCell:
+                return LayoutSectionFactory.descriptionCell()
             default: return nil
+           
             }
         }
         return layout
@@ -45,7 +48,9 @@ class DetailViewController: UIViewController {
     
     private func setupCollectionView(){
         let cells: [RegisterableView] = [
-            .nib(FruitsCell.self)
+            .nib(FruitsCell.self),
+            .nib(DescriptionCell.self),
+        
         ]
         
         
@@ -69,7 +74,9 @@ class DetailViewController: UIViewController {
             case .fruitCell:
                 let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "FruitsCell", for: indexPath)
                 return cell
-
+            case .desriptionCell:
+                let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath)
+                return cell
                 
             default:return nil
             }
@@ -78,7 +85,11 @@ class DetailViewController: UIViewController {
         let sections = [
             Section(type:.fruitCell,items: [
                         Item()
-            ])
+           
+            ]),
+            Section(type:.desriptionCell,items: [
+                        Item()
+            ]),
         ]
         
           

@@ -35,6 +35,8 @@
 		C43C843A2942909B007697A6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43C84382942909B007697A6 /* Detail.storyboard */; };
 		C43C843D29451852007697A6 /* FruitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C843B29451852007697A6 /* FruitsCell.swift */; };
 		C43C843E29451852007697A6 /* FruitsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C843C29451852007697A6 /* FruitsCell.xib */; };
+		C43C84412946B835007697A6 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C843F2946B835007697A6 /* DescriptionCell.swift */; };
+		C43C84422946B835007697A6 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C84402946B835007697A6 /* DescriptionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		C43C84392942909B007697A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GroceryApp/App/Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
 		C43C843B29451852007697A6 /* FruitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCell.swift; sourceTree = "<group>"; };
 		C43C843C29451852007697A6 /* FruitsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitsCell.xib; sourceTree = "<group>"; };
+		C43C843F2946B835007697A6 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		C43C84402946B835007697A6 /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 			children = (
 				C43C843B29451852007697A6 /* FruitsCell.swift */,
 				C43C843C29451852007697A6 /* FruitsCell.xib */,
+				C43C843F2946B835007697A6 /* DescriptionCell.swift */,
+				C43C84402946B835007697A6 /* DescriptionCell.xib */,
 			);
 			path = DetailViews;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				C43C842A293BCEE1007697A6 /* PopularDealsCell.xib in Resources */,
 				C43C8422293BC425007697A6 /* CategoriesCell.xib in Resources */,
 				C43C8414293961C7007697A6 /* HeaderCell.xib in Resources */,
+				C43C84422946B835007697A6 /* DescriptionCell.xib in Resources */,
 				C43C843A2942909B007697A6 /* Detail.storyboard in Resources */,
 				C43C8401293809F9007697A6 /* LaunchScreen.storyboard in Resources */,
 				C43C843E29451852007697A6 /* FruitsCell.xib in Resources */,
@@ -261,6 +268,7 @@
 			files = (
 				C43C842E293BDB97007697A6 /* DetailViewController.swift in Sources */,
 				C43C843729427E7A007697A6 /* LayoutSection.swift in Sources */,
+				C43C84412946B835007697A6 /* DescriptionCell.swift in Sources */,
 				C43C841729396AFD007697A6 /* SearchBarCell.swift in Sources */,
 				C43C8429293BCEE1007697A6 /* PopularDealsCell.swift in Sources */,
 				C43C8425293BC7BA007697A6 /* CategoriesItemsCell.swift in Sources */,
