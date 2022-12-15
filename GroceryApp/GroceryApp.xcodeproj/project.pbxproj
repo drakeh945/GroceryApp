@@ -37,6 +37,10 @@
 		C43C844629478F60007697A6 /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C844329478F60007697A6 /* RegisterableView.swift */; };
 		C43C844729478F60007697A6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C844429478F60007697A6 /* UICollectionView+Extension.swift */; };
 		C43C844829478F60007697A6 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C844529478F60007697A6 /* UIView+IBInspectable.swift */; };
+		C4BE3FBD294BA99900287EAD /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE3FBB294BA99900287EAD /* CartCell.swift */; };
+		C4BE3FBE294BA99900287EAD /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BE3FBC294BA99900287EAD /* CartCell.xib */; };
+		C4D255992948F644000F030A /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D255972948F644000F030A /* PriceCell.swift */; };
+		C4D2559A2948F644000F030A /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D255982948F644000F030A /* PriceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		C43C844329478F60007697A6 /* RegisterableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
 		C43C844429478F60007697A6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		C43C844529478F60007697A6 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		C4BE3FBB294BA99900287EAD /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		C4BE3FBC294BA99900287EAD /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		C4D255972948F644000F030A /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
+		C4D255982948F644000F030A /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,10 @@
 				C43C843C29451852007697A6 /* FruitsCell.xib */,
 				C43C843F2946B835007697A6 /* DescriptionCell.swift */,
 				C43C84402946B835007697A6 /* DescriptionCell.xib */,
+				C4D255972948F644000F030A /* PriceCell.swift */,
+				C4D255982948F644000F030A /* PriceCell.xib */,
+				C4BE3FBB294BA99900287EAD /* CartCell.swift */,
+				C4BE3FBC294BA99900287EAD /* CartCell.xib */,
 			);
 			path = DetailViews;
 			sourceTree = "<group>";
@@ -245,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C43C8426293BC7BA007697A6 /* CategoriesItemsCell.xib in Resources */,
+				C4BE3FBE294BA99900287EAD /* CartCell.xib in Resources */,
 				C43C842A293BCEE1007697A6 /* PopularDealsCell.xib in Resources */,
+				C4D2559A2948F644000F030A /* PriceCell.xib in Resources */,
 				C43C8422293BC425007697A6 /* CategoriesCell.xib in Resources */,
 				C43C8414293961C7007697A6 /* HeaderCell.xib in Resources */,
 				C43C84422946B835007697A6 /* DescriptionCell.xib in Resources */,
@@ -277,12 +291,14 @@
 				C43C840C29394868007697A6 /* Section.swift in Sources */,
 				C43C840A29394673007697A6 /* Item.swift in Sources */,
 				C43C83F9293809F8007697A6 /* ViewController.swift in Sources */,
+				C4BE3FBD294BA99900287EAD /* CartCell.swift in Sources */,
 				C43C8421293BC425007697A6 /* CategoriesCell.swift in Sources */,
 				C43C83F5293809F8007697A6 /* AppDelegate.swift in Sources */,
 				C43C841B293BBA2E007697A6 /* PromotionCell.swift in Sources */,
 				C43C8413293961C7007697A6 /* HeaderCell.swift in Sources */,
 				C43C83F7293809F8007697A6 /* SceneDelegate.swift in Sources */,
 				C43C843D29451852007697A6 /* FruitsCell.swift in Sources */,
+				C4D255992948F644000F030A /* PriceCell.swift in Sources */,
 				C43C844729478F60007697A6 /* UICollectionView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

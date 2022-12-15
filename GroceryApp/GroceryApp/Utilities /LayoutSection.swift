@@ -9,13 +9,15 @@ import UIKit
 
 protocol LayoutSection {
     static func header() -> NSCollectionLayoutSection
-    static func SearchBar() -> NSCollectionLayoutSection
+    static func searchBar() -> NSCollectionLayoutSection
     static func promotion() -> NSCollectionLayoutSection
     static func categories() -> NSCollectionLayoutSection
     static func categoriesItem() -> NSCollectionLayoutSection
     static func popularheader() -> NSCollectionLayoutSection
     static func populardeals() -> NSCollectionLayoutSection
     static func fruitCell() -> NSCollectionLayoutSection
+    static func priceCell() -> NSCollectionLayoutSection
+
 }
 
 struct LayoutSectionFactory: LayoutSection {
@@ -37,36 +39,35 @@ struct LayoutSectionFactory: LayoutSection {
         return section
     }
     
-    static func SearchBar() -> NSCollectionLayoutSection{
+    static func searchBar() -> NSCollectionLayoutSection{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(318), heightDimension: .absolute(54))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
         
         let section = NSCollectionLayoutSection(group:group)
-        section.orthogonalScrollingBehavior = .groupPaging
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 5, trailing: 0)
         
         return section
     }
     
     static func promotion() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(168))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(344), heightDimension: .absolute(168))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .absolute(168))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
         
         let section = NSCollectionLayoutSection(group:group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
+       // section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
         
         return section
     }
@@ -138,7 +139,6 @@ struct LayoutSectionFactory: LayoutSection {
         let groupH = NSCollectionLayoutGroup.horizontal(layoutSize: groupSizeH, subitem: item, count: 2)
         let groupV = NSCollectionLayoutGroup.vertical(layoutSize: groupSizeV, subitem: groupH, count: 3)
         
-        
         groupV.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 28, bottom: 0, trailing: 28)
         
         let section = NSCollectionLayoutSection(group:groupV)
@@ -155,13 +155,9 @@ struct LayoutSectionFactory: LayoutSection {
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(366))
        
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        
-        
         
         let section = NSCollectionLayoutSection(group:group)
         
@@ -177,13 +173,9 @@ struct LayoutSectionFactory: LayoutSection {
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(444))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(185))
        
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        
-        
         
         let section = NSCollectionLayoutSection(group:group)
         
@@ -192,7 +184,25 @@ struct LayoutSectionFactory: LayoutSection {
         return section
         
     }
+    static func priceCell() -> NSCollectionLayoutSection{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(96))
+       
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group:group)
+        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+       
+        return section
+        
     
 }
 
 
+}

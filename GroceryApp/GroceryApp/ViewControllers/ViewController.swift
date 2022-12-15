@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             
             switch sectionType {
             case .header: return LayoutSectionFactory.header()
-            case .SearchBar: return LayoutSectionFactory.SearchBar()
+            case .searchBar: return LayoutSectionFactory.searchBar()
             case .promotion: return LayoutSectionFactory.promotion()
             case .categories: return LayoutSectionFactory.categories()
             case .categoriesItems: return LayoutSectionFactory.categoriesItem()
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             case .header:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderCell", for: indexPath)
                 return cell
-            case .SearchBar:
+            case .searchBar:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchBarCell", for: indexPath)
                 return cell
             case .promotion:
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             Section(type: .header, items: [
                 Item()
             ]),
-            Section(type: .SearchBar, items: [
+            Section(type: .searchBar, items: [
                 Item()
             ]),
             Section(type: .promotion, items: [Item(),Item(),Item()]),
@@ -137,7 +137,6 @@ extension ViewController: UICollectionViewDelegate {
         let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false)
-        
         
     }
 }

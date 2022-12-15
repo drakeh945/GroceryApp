@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
                 return LayoutSectionFactory.fruitCell() 
             case .desriptionCell:
                 return LayoutSectionFactory.descriptionCell()
+            case .priceCell:
+                return LayoutSectionFactory.priceCell()
             default: return nil
            
             }
@@ -50,7 +52,8 @@ class DetailViewController: UIViewController {
         let cells: [RegisterableView] = [
             .nib(FruitsCell.self),
             .nib(DescriptionCell.self),
-        
+            .nib(PriceCell.self),
+       
         ]
         
         
@@ -77,7 +80,10 @@ class DetailViewController: UIViewController {
             case .desriptionCell:
                 let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath)
                 return cell
-                
+             
+            case .priceCell:
+                let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "PriceCell", for: indexPath)
+                return cell
             default:return nil
             }
         }
@@ -90,6 +96,10 @@ class DetailViewController: UIViewController {
             Section(type:.desriptionCell,items: [
                         Item()
             ]),
+            Section(type:.priceCell,items: [
+                        Item()
+            ]),
+        
         ]
         
           

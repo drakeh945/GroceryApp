@@ -24,7 +24,7 @@ struct Section: Hashable {
      // pair with static 
     enum itemSectionType:String {
         case header
-        case SearchBar
+        case searchBar
         case promotion
         case categories
         case categoriesItems
@@ -32,6 +32,8 @@ struct Section: Hashable {
         case populardeals
         case fruitCell
         case descriptionCell
+        case priceCell
+        
     }
     
     
@@ -43,7 +45,7 @@ struct Section: Hashable {
         }
       // can copy this line for
         static let header = SectionType (rawValue: Section.itemSectionType.header.rawValue)
-        static let SearchBar = SectionType (rawValue: Section.itemSectionType.SearchBar.rawValue)
+        static let searchBar = SectionType (rawValue: Section.itemSectionType.searchBar.rawValue)
         static let promotion = SectionType (rawValue: Section.itemSectionType.promotion.rawValue)
         static let categories = SectionType (rawValue: Section.itemSectionType.categories.rawValue)
         static let categoriesItems = SectionType (rawValue: Section.itemSectionType.categoriesItems.rawValue)
@@ -51,6 +53,7 @@ struct Section: Hashable {
         static let populardeals  = SectionType (rawValue: Section.itemSectionType.populardeals.rawValue)
         static let fruitCell  = SectionType (rawValue: Section.itemSectionType.fruitCell.rawValue)
         static let desriptionCell  = SectionType (rawValue: Section.itemSectionType.descriptionCell.rawValue)
+        static let priceCell = SectionType (rawValue: Section.itemSectionType.priceCell.rawValue)
     }
     
     
