@@ -33,7 +33,7 @@ struct Section: Hashable {
         case fruitCell
         case descriptionCell
         case priceCell
-        
+        case cartCell
     }
     
     
@@ -43,7 +43,7 @@ struct Section: Hashable {
         init(rawValue: String) {
             self.rawValue = rawValue
         }
-      // can copy this line for
+        // can copy this line for
         static let header = SectionType (rawValue: Section.itemSectionType.header.rawValue)
         static let searchBar = SectionType (rawValue: Section.itemSectionType.searchBar.rawValue)
         static let promotion = SectionType (rawValue: Section.itemSectionType.promotion.rawValue)
@@ -54,7 +54,7 @@ struct Section: Hashable {
         static let fruitCell  = SectionType (rawValue: Section.itemSectionType.fruitCell.rawValue)
         static let desriptionCell  = SectionType (rawValue: Section.itemSectionType.descriptionCell.rawValue)
         static let priceCell = SectionType (rawValue: Section.itemSectionType.priceCell.rawValue)
+        static let cartCell = SectionType (rawValue:
+                    Section.itemSectionType.cartCell.rawValue)
     }
-    
-    
 }
