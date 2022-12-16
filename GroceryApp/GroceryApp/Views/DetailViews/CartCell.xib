@@ -19,12 +19,12 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-qA-u8D">
-                        <rect key="frame" x="29" y="14" width="136" height="34"/>
+                        <rect key="frame" x="29" y="14" width="143" height="34"/>
                         <color key="backgroundColor" name="DealColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="Scz-05-kv5"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <state key="normal" title="20% OFF DISCOUNT">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
@@ -34,14 +34,14 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6r-4I-I8W">
-                        <rect key="frame" x="28" y="62" width="300" height="47"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6r-4I-I8W">
+                        <rect key="frame" x="29.5" y="62" width="318" height="59"/>
                         <color key="backgroundColor" name="PlusColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="47" id="U3V-bD-9M1"/>
+                            <constraint firstAttribute="height" constant="59" id="U3V-bD-9M1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <state key="normal" title=" ADD TO CART">
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <state key="normal" title="ADD TO CART">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -54,9 +54,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="p6r-4I-I8W" secondAttribute="trailing" constant="29.5" id="8ck-VT-NMl"/>
                 <constraint firstItem="p6r-4I-I8W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="8g7-a3-Hnb"/>
-                <constraint firstItem="p6r-4I-I8W" firstAttribute="top" secondItem="cR7-qA-u8D" secondAttribute="bottom" constant="14" id="ItH-F3-2Zg"/>
                 <constraint firstItem="cR7-qA-u8D" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="JsL-In-OT4"/>
+                <constraint firstItem="p6r-4I-I8W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="29.5" id="MtC-Zh-EWR"/>
+                <constraint firstAttribute="bottom" secondItem="p6r-4I-I8W" secondAttribute="bottom" id="T1b-HG-Ub3"/>
+                <constraint firstItem="p6r-4I-I8W" firstAttribute="top" secondItem="cR7-qA-u8D" secondAttribute="bottom" constant="14" id="emT-9M-eWz"/>
                 <constraint firstItem="cR7-qA-u8D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="29" id="tOs-XN-S7u"/>
             </constraints>
             <size key="customSize" width="377" height="114"/>
